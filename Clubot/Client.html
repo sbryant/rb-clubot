@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=US-ASCII" http-equiv="Content-Type">
+
+<title>class Clubot::Client - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/clubot.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    <nav id="sections-section" class="section">
+  <h3 class="section-header">Sections</h3>
+  <ul class="link-list">
+    
+      <li><a href="#5Buntitled-5D"></a></li>
+    
+      <li><a href="#Public">Public</a></li>
+    
+  </ul>
+</nav>
+
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-connect">#connect</a>
+    
+    <li><a href="#method-i-request">#request</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Clubot.html">Clubot</a>
+  
+    <li><a href="../Clubot/Client.html">Clubot::Client</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Clubot::Client</h1>
+
+  <div id="description" class="description">
+    
+<p>The <a href="../Clubot.html">Clubot</a> client class <a
+href="../Clubot.html">Clubot</a> clients bind SUB and DEALER sockets for
+receiving chat broadcast and request/reply communication respectively.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+  </section><!-- 5Buntitled-5D -->
+
+  
+  
+  <section id="Public" class="documentation-section">
+    
+    <div class="documentation-section-title">
+      <h2 class="section-header">
+        Public
+      </h2>
+      <span class="section-click-top">
+        <a href="#top">&uarr; top</a>
+      </span>
+    </div>
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-dealer_sock" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">dealer_sock</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The ZMQ::DEALER socket</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-sub_sock" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">sub_sock</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The ZMQ::SUB socket</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-Public-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(sub_addr = "tcp://localhost:14532", dealer_addr = "tcp://localhost:14533", filters = [":PRIVMSG", ":INVITE", ":JOIN", ":BOOT", ":PART"])</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create the ZMQ sockets for commutation.</p>
+<dl class="rdoc-list note-list"><dt>sub_addr
+<dd>
+<p>A ZMQ address string. (default: 'tcp://localhost:14532')</p>
+</dd><dt>dealer_addr
+<dd>
+<p>A ZMQ dealer string. (default: 'tcp://localhost:14533')</p>
+</dd><dt>filters
+<dd>
+<p>An array of strings used set subscriptions filters. (default: [":PRIVMSG",
+":INVITE", ":JOIN", ":BOOT", ":PART"])</p>
+</dd></dl>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/clubot.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">sub_addr</span> = <span class="ruby-string">&quot;tcp://localhost:14532&quot;</span>,
+               <span class="ruby-identifier">dealer_addr</span> = <span class="ruby-string">&quot;tcp://localhost:14533&quot;</span>,
+               <span class="ruby-identifier">filters</span> = [<span class="ruby-string">&quot;:PRIVMSG&quot;</span>,
+                          <span class="ruby-string">&quot;:INVITE&quot;</span>,
+                          <span class="ruby-string">&quot;:JOIN&quot;</span>,
+                          <span class="ruby-string">&quot;:BOOT&quot;</span>,
+                          <span class="ruby-string">&quot;:PART&quot;</span>])
+  
+  <span class="ruby-ivar">@sub_addr</span>, <span class="ruby-ivar">@dealer_addr</span>, <span class="ruby-ivar">@filters</span>  = <span class="ruby-identifier">sub_addr</span>, <span class="ruby-identifier">dealer_addr</span>, <span class="ruby-identifier">filters</span>
+  <span class="ruby-ivar">@sub_sock</span> = <span class="ruby-constant">Clubot</span>.<span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">socket</span> <span class="ruby-constant">ZMQ</span><span class="ruby-operator">::</span><span class="ruby-constant">SUB</span>
+  <span class="ruby-ivar">@dealer_sock</span> = <span class="ruby-constant">Clubot</span>.<span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">socket</span> <span class="ruby-constant">ZMQ</span><span class="ruby-operator">::</span><span class="ruby-constant">DEALER</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-Public-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-connect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">connect</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Connect the ZMQ::PUB and ZMQ::DEALER. Also setup up the subscription
+filters</p>
+
+<p>Returns nothing.</p>
+          
+
+          
+          <div class="method-source-code" id="connect-source">
+            <pre><span class="ruby-comment"># File lib/clubot.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>
+  <span class="ruby-ivar">@filters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filter</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@sub_sock</span>.<span class="ruby-identifier">setsockopt</span> <span class="ruby-constant">ZMQ</span><span class="ruby-operator">::</span><span class="ruby-constant">SUBSCRIBE</span>, <span class="ruby-identifier">filter</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@sub_sock</span>.<span class="ruby-identifier">connect</span> <span class="ruby-ivar">@sub_addr</span>
+  <span class="ruby-ivar">@dealer_sock</span>.<span class="ruby-identifier">connect</span> <span class="ruby-ivar">@dealer_addr</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- connect-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- connect-method -->
+
+    
+      <div id="method-i-request" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">request</span><span
+            class="method-args">(data, &blk)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Make a request to clubot.</p>
+<dl class="rdoc-list note-list"><dt>data
+<dd>
+<p>A hash representing the kind of request. The data is first encoded as JSON
+and sent.</p>
+</dd><dt>blk
+<dd>
+<p>An optional callback if the request being made expects a reply. (optional)</p>
+</dd></dl>
+
+<p>Returns nothing or if a block was provided the result of calling the block.</p>
+          
+
+          
+          <div class="method-source-code" id="request-source">
+            <pre><span class="ruby-comment"># File lib/clubot.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">request</span> <span class="ruby-identifier">data</span>, &amp;<span class="ruby-identifier">blk</span>
+  <span class="ruby-identifier">json</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">generate</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-ivar">@dealer_sock</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">json</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">blk</span>.<span class="ruby-identifier">call</span> <span class="ruby-ivar">@dealer_sock</span>.<span class="ruby-identifier">recv</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- request-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- request-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- Public -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
