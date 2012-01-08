@@ -72,7 +72,7 @@ module Clubot
       json = JSON.generate data
       @dealer_sock.send json
       if block_given?
-        blk.call @dealer_sock.recv
+        blk.call JSON.parse(@dealer_sock.recv)
       end
     end
   end
