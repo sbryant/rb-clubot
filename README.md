@@ -14,7 +14,7 @@ Installation
 If you're using bundler just add the gem to your Gemfile:
 
 ```ruby
-gem 'clubot', :git => "https://github.com/sbryant/rb-clubot"
+gem 'clubot', :git => "git://github.com/sbryant/rb-clubot.git"
 ```
 
 I should have this submitted to rubygems when clubot is more complete.
@@ -40,6 +40,7 @@ end
 loop do
   ins, out, err = ZMQ.select([client.sub_sock])
   ins.each do |i|
+    # We use multipart messages to make subscriptions easier.
     header = i.recv
     json = i.recv
 
